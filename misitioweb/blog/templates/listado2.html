@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <META http-equiv='Content-type' content="text/html, charset=UTF-8" > 
+  </head>
+  <body>
+    <div id="contenedor">
+      <header>
+        <h1>Mi Blog</h1>
+        <h2>Blog de Franklin Jiménez en Django</h2>
+      </header>   
+      <section>
+        {% for elemento in entrada.object_list %}  
+          <article>
+            <h3>{{ elemento.titulo }}</h3>
+            <time>{{ elemento.fecha }}</time>
+            <p>{{ elemento.contenido }}</p>
+          </article> 
+        {% endfor %}     
+      </section>
+      <footer>
+        (c)2014 by frank
+      </footer>   
+    </div>
+  </body>
+</html>
+
